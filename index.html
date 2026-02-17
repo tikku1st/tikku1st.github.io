@@ -3,107 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sproutora | Health Dashboard</title>
+    <title>Sproutora | Healthy Breakfast</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Outfit', sans-serif; background-color: #ffffff; color: #1a1a1a; }
-        .sanskrit-text { font-family: 'Cinzel', serif; color: #15803d; }
-        .nav-glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
-        .hero-img { border-radius: 40px; box-shadow: 0 30px 60px -12px rgba(0,0,0,0.15); }
-        .sub-card { border: 2px solid #f1f5f9; transition: 0.3s; }
-        .sub-card:hover { border-color: #15803d; transform: translateY(-5px); }
+        body { font-family: 'Outfit', sans-serif; margin: 0; background-color: #fcfcfc; }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
     </style>
 </head>
 <body>
 
-    <nav class="nav-glass sticky top-0 z-50 px-6 py-5 border-b border-gray-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="logos.png" alt="Sproutora Logo" class="w-12 h-12 object-contain">
-                
-                <div class="flex flex-col">
-                    <h1 class="text-2xl font-black text-green-700 italic tracking-tighter leading-none">SPROUTORA</h1>
-                    <span class="text-[9px] font-bold text-slate-400 tracking-[0.3em] uppercase leading-none mt-1">Eat Clean & Be Healthy <br> MBA Entrepreneur Led</span>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-6">
-                <a href="https://instagram.com/sproutora.in" target="_blank" class="hover:scale-110 transition">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" class="w-7 h-7" alt="Instagram">
-                </a>
-                <a href="https://wa.me/919406395175" target="_blank" class="hover:scale-110 transition">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="w-7 h-7" alt="WhatsApp">
-                </a>
+<nav class="sticky top-0 z-[1000] bg-white/90 backdrop-blur-md px-6 py-4 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <img src="logos.png" alt="Logo" class="w-12 h-12 object-contain">
+            <div>
+                <h1 class="m-0 text-2xl font-black text-green-700 italic tracking-tighter leading-none">SPROUTORA</h1>
+                <p class="m-0 text-[10px] text-slate-400 font-bold tracking-[2px] uppercase">Eat Clean & Be Healthy</p>
             </div>
         </div>
-    </nav>
 
-    <header class="py-12 px-6 text-center">
-        <h3 class="text-2xl md:text-4xl font-bold text-green-700 mb-1">
-            In Your Bilaspur City
-        </h3>
-        
-        <h2 class="sanskrit-text text-2xl md:text-4xl font-bold italic mb-3">
-            शरीरमाद्यं खलु धर्मसाधनम्
-        </h2>
-        <div class="w-24 h-1 bg-green-100 mx-auto mb-4"></div>
-        <p class="text-[11px] text-slate-400 font-bold uppercase tracking-[0.4em]">
-            "A healthy body is the foundation of every success"
-        </p>
-    </header>
-
-    <section class="max-w-4xl mx-auto px-6 mb-16">
-        <div class="relative group">
-            <img src="logo.png" 
-                 alt="Premium Moong Chana Bowl" 
-                 class="hero-img w-full h-[450px] object-cover">
-            <div class="absolute top-2 right-2 bg-yellow-400 text-black font-black text-[10px] px-6 py-2 rounded-full shadow-lg">
-                FRESHLY SPROUTED
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-xl mx-auto px-6 text-center mb-24">
-        <div class="sub-card bg-stone-50 p-10 rounded-[40px]">
-            <h4 class="text-xs font-black text-green-700 uppercase tracking-[0.3em] mb-4">Daily Power Pack</h4>
-            <div class="flex justify-center items-baseline gap-1 mb-6">
-                <span class="text-5xl font-black text-slate-900 leading-none tracking-tighter">₹30</span>
-                <span class="text-slate-400 font-bold text-sm uppercase">/ Bowl</span>
-            </div>
+        <div class="flex gap-6 items-center">
+            <a href="index.html" class="no-underline text-green-700 font-bold text-xs uppercase tracking-wider border-b-2 border-green-700">Home</a>
+            <a href="menu.html" class="no-underline text-slate-500 font-bold text-xs uppercase tracking-wider hover:text-green-700 transition">Menu</a>
             
-            <p class="text-slate-500 text-sm mb-10 leading-relaxed font-medium">
-                High-Protein Green Moong, Black Chana, Peanuts & Pomegranate. 
-                Delivered fresh at <span class="text-slate-900 font-bold">8:30 AM</span> in Vyapar Vihar.
-            </p>
-
-            <a href="https://wa.me/919406395175?text=Hi, I want to subscribe to Sproutora Daily Pack" 
-               class="block bg-slate-950 text-white py-5 rounded-3xl font-black text-sm uppercase tracking-[0.2em] shadow-2xl hover:bg-green-700 transition duration-500">
-                Order Now via WhatsApp
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-slate-50 py-20 px-8 border-t border-gray-100">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-            <div class="text-center md:text-left flex items-center gap-4">
-                <img src="logos.png" alt="Sproutora" class="w-10 h-10 object-contain">
-                <div>
-                    <h5 class="text-2xl font-black italic text-slate-950 mb-1">SPROUTORA</h5>
-                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest leading-none">Vyapar Vihar, Bilaspur (C.G.)</p>
-                </div>
-            </div>
-            
-            <div class="flex flex-col items-center md:items-end gap-2">
-                <a href="mailto:Sproutora.in@gmail.com" class="text-sm font-bold text-slate-600 hover:text-green-700 transition">Sproutora.in@gmail.com</a>
-                <a href="tel:9406395175" class="text-sm font-black text-slate-900">+91 9406395175</a>
+            <div class="flex gap-4 items-center">
+                <a href="https://instagram.com/sproutora.in" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" class="w-6 h-6" alt="Instagram">
+                </a>
+                <a href="https://wa.me/919406395175" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="w-6 h-6" alt="WhatsApp">
+                </a>
             </div>
         </div>
+    </div>
+</nav>
+
+<div class="text-center py-24 px-5">
+    <h2 class="text-slate-800 text-4xl font-black mb-4 uppercase tracking-tight">Welcome to Sproutora</h2>
+    <p class="text-slate-500 text-lg">Aapka Swasthya, Humari Pehchaan.</p>
+    <div class="mt-8">
+        <a href="menu.html" class="bg-green-700 text-white px-8 py-3 rounded-full font-bold hover:bg-green-800 transition shadow-lg shadow-green-700/20">View Menu</a>
+    </div>
+</div>
+
+<div id="sprout-bot-root">
+    <div id="sb-icon" style="position:fixed; bottom:20px; right:20px; width:75px; height:75px; z-index:9999999 !important; cursor:pointer; display:block !important;">
+        <img src="chatbot.png" id="sb-img" style="width:100%; height:100%; object-fit:contain; pointer-events:none; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));">
+    </div>
+
+    <div id="sb-window" style="display:none; position:fixed; bottom:105px; right:20px; width:340px; height:500px; background:white; border-radius:24px; box-shadow:0 15px 50px rgba(0,0,0,0.3); z-index:9999999 !important; flex-direction:column; overflow:hidden; border:1px solid #eee; animation: slideIn 0.3s ease;">
+        <div style="background:#15803d; color:white; padding:18px; font-weight:bold; display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; align-items:center; gap:8px;">
+                <img src="logos.png" style="width:25px; height:25px; border-radius:50%; background:white;">
+                <span>Sproutora Assistant</span>
+            </div>
+            <span id="sb-close" style="cursor:pointer; font-size:24px;">&times;</span>
+        </div>
+
+        <div id="sb-messages" style="flex:1; padding:15px; overflow-y:auto; background:#f8fafc; display:flex; flex-direction:column; gap:12px;">
+            <div style="background:white; padding:12px; border-radius:15px 15px 15px 4px; align-self:flex-start; font-size:14px; border:1px solid #efefef; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                Hello! Main Sproutora AI hoon. Aapka naam kya hai?
+            </div>
+        </div>
+
+        <div style="padding:15px; background:white; border-top:1px solid #f1f5f9; display:flex; gap:8px;">
+            <input type="text" id="sb-input" placeholder="Type Hi, Price, Menu..." style="flex:1; padding:12px; border-radius:12px; border:1px solid #e2e8f0; outline:none; font-size:14px;">
+            <button id="sb-send" style="background:#15803d; color:white; border:none; width:45px; height:45px; border-radius:12px; cursor:pointer; display:flex; align-items:center; justify-content:center;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    const icon = document.getElementById('sb-icon');
+    const win = document.getElementById('sb-window');
+    const close = document.getElementById('sb-close');
+    const input = document.getElementById('sb-input');
+    const send = document.getElementById('sb-send');
+    const msgs = document.getElementById('sb-messages');
+
+    icon.onclick = () => { win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none'; };
+    close.onclick = () => { win.style.display = 'none'; };
+
+    function handleSend() {
+        const val = input.value.trim();
+        const text = val.toLowerCase();
+        if(!val) return;
+
+        // Static data for index page
+        const site = {
+            price: "₹30",
+            address: "Vyapar Vihar, Bilaspur (C.G.)",
+            timing: "8:30 AM"
+        };
+
+        // User Bubble
+        msgs.innerHTML += `<div style="background:#15803d; color:white; padding:10px 15px; border-radius:15px 15px 4px 15px; align-self:flex-end; font-size:14px; max-width:85%;">${val}</div>`;
         
-        <div class="text-center mt-16 pt-8 border-t border-gray-200">
-            <p class="text-[9px] text-slate-300 font-bold uppercase tracking-[0.8em]">© 2026 SPROUTORA. Eat Clean.</p>
-        </div>
-    </footer>
+        let reply = "";
+        const isHindi = /[\u0900-\u097F]/.test(val) || /kaise|kya|hai|naam|paisa|kitna|kaun/.test(text);
+
+        // --- BOT LOGIC ---
+        if (text.match(/\b(hi|hello|hey|hii|namaste)\b/)) {
+            reply = isHindi ? "Namaste! Kaise hain aap? Main aapki kya madad kar sakta hoon?" : "Hello! How can I help you today?";
+        } 
+        else if (text.match(/\b(how are you|kaise ho|kaise hain|hal chal)\b/)) {
+            reply = isHindi ? "Main bilkul badhiya hoon! Aapka din kaisa ja raha hai? 😊" : "I'm doing great! Ready to serve you some health. How about you?";
+        }
+        else if (text.match(/name|naam|kaun|who/)) {
+            reply = isHindi ? "Mera naam Sproutora AI hai! Main aapka healthy companion hoon." : "I am Sproutora AI, your guide to a healthy breakfast!";
+        }
+        else if (text.match(/price|cost|daam|paisa|kitna/)) {
+            reply = isHindi ? `Hamare healthy bowl ki price abhi ${site.price} hai.` : `Our healthy bowl costs only ${site.price}.`;
+        }
+        else if (text.match(/location|address|kahan|where|bilaspur/)) {
+            reply = isHindi ? `Hum ${site.address} mein deliver karte hain.` : `We are based in ${site.address}.`;
+        }
+        else if (text.match(/time|kab|delivery|morning/)) {
+            reply = isHindi ? `Hum roz subah ${site.timing} tak delivery kar dete hain.` : `We deliver every morning by ${site.timing}.`;
+        }
+        else if (text.match(/\b(good|badhiya|achha|nice|great)\b/)) {
+            reply = isHindi ? "Sunkar achha laga! 😊 Kuch aur jaanna chahte hain?" : "That's great to hear! 😊 Anything else?";
+        }
+        else {
+            reply = isHindi ? "Maaf kijiye, main samajh nahi paaya. Aap Price, Menu ya Delivery ke baare mein pooch sakte hain." : "I'm still learning! You can ask about our Price, Menu, or Delivery timings.";
+        }
+
+        setTimeout(() => {
+            msgs.innerHTML += `<div style="background:white; color:#333; padding:12px; border-radius:15px 15px 15px 4px; align-self:flex-start; font-size:14px; border:1px solid #efefef; max-width:85%; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">${reply}</div>`;
+            msgs.scrollTop = msgs.scrollHeight;
+        }, 600);
+        
+        input.value = "";
+    }
+
+    send.onclick = handleSend;
+    input.onkeypress = (e) => { if(e.key === 'Enter') handleSend(); };
+})();
+</script>
 
 </body>
 </html>
