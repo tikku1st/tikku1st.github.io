@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Outfit', sans-serif; }
+        @keyframes slideIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     </style>
 </head>
 <body class="bg-slate-50">
@@ -21,44 +22,58 @@
                     <p class="text-[8px] text-slate-400 font-bold tracking-widest uppercase">Eat Clean & Be Healthy</p>
                 </div>
             </div>
-            <div class="flex gap-6 text-xs font-bold uppercase tracking-widest">
-                <a href="index.html" class="text-slate-500 hover:text-green-700 transition">Home</a>
-                <a href="menu.html" class="text-green-700 border-b-2 border-green-700">Menu</a>
+
+            <div class="flex gap-6 items-center">
+                <div class="flex gap-6 text-xs font-bold uppercase tracking-wider">
+                    <a href="index.html" class="text-slate-500 hover:text-green-700 transition">Home</a>
+                    <a href="menu.html" class="text-green-700 border-b-2 border-green-700">Menu</a>
+                </div>
+                
+                <div class="flex gap-4 items-center border-l pl-6 border-gray-200">
+                    <a href="https://instagram.com/sproutora.in" target="_blank" class="hover:scale-110 transition">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" class="w-5 h-5" alt="Instagram">
+                    </a>
+                    <a href="https://wa.me/919406395175" target="_blank" class="hover:scale-110 transition">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="w-5 h-5" alt="WhatsApp">
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <header class="py-12 text-center">
-        <h1 class="text-4xl font-black text-slate-900 mb-2 uppercase tracking-tight">Our Healthy Menu</h1>
-        <p class="text-slate-500">Bilaspur ka sabse fresh aur protein-packed nashta</p>
-    </header>
+    <main class="max-w-4xl mx-auto py-12 px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-slate-800 uppercase italic">Our Special Menu</h2>
+            <div class="h-1 w-20 bg-green-600 mx-auto mt-2"></div>
+        </div>
 
-    <main class="max-w-4xl mx-auto px-6 pb-24">
-        <div class="bg-white rounded-[32px] p-8 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col md:flex-row gap-8 items-center">
-            <div class="w-full md:w-1/2">
-                <img src="logo.png" alt="Sprout Bowl" class="w-full h-64 object-cover rounded-[24px]">
-            </div>
-            <div class="w-full md:w-1/2 space-y-4">
-                <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-xs font-bold uppercase">Best Seller</span>
-                <h3 class="text-3xl font-black text-slate-900 leading-tight">Classic Healthy Sprout Bowl</h3>
-                <p class="text-slate-500 text-sm">Ingredients: Green Moong, Kaala Chana, Crunchy Peanuts, and Fresh Pomegranate.</p>
-                <div class="flex items-center gap-4">
-                    <span class="text-4xl font-black text-green-700 text-5xl">₹30</span>
-                    <span class="text-slate-400 line-through text-lg">₹50</span>
+        <div class="bg-white rounded-[32px] overflow-hidden shadow-xl shadow-slate-200/60 border border-slate-100">
+            <div class="md:flex">
+                <div class="md:w-1/2">
+                    <img src="logo.png" alt="Healthy Sprout Bowl" class="w-full h-full object-cover min-h-[300px]">
                 </div>
-                <a href="https://wa.me/919406395175" class="inline-flex items-center justify-center w-full bg-green-700 hover:bg-green-800 text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-green-700/20">
-                    Order on WhatsApp
-                </a>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                    <div class="inline-block px-3 py-1 bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Best Seller</div>
+                    <h3 class="text-3xl font-black text-slate-800 mb-2 uppercase">Healthy Sprout Bowl</h3>
+                    <p class="text-slate-500 mb-6 leading-relaxed">Green Moong, Black Chana, Peanuts, and fresh Pomegranate. A perfect protein-rich breakfast.</p>
+                    
+                    <div class="flex items-baseline gap-2 mb-8">
+                        <span class="text-4xl font-black text-green-700">₹30</span>
+                        <span class="text-slate-400 font-bold text-sm">/ Per Bowl</span>
+                    </div>
+
+                    <a href="https://wa.me/919406395175" class="bg-green-700 text-white text-center py-4 rounded-2xl font-bold hover:bg-green-800 transition shadow-lg shadow-green-700/20">Order via WhatsApp</a>
+                </div>
             </div>
         </div>
     </main>
 
     <div id="sprout-bot-root">
-        <div id="sb-icon" style="position:fixed; bottom:20px; right:20px; width:75px; height:75px; z-index:9999999 !important; cursor:pointer; display:block !important;">
-            <img src="chatbot.png" id="sb-img" style="width:100%; height:100%; object-fit:contain; pointer-events:none; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));">
+        <div id="sb-icon" style="position:fixed; bottom:20px; right:20px; width:75px; height:75px; z-index:9999999; cursor:pointer;">
+            <img src="chatbot.png" style="width:100%; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));">
         </div>
 
-        <div id="sb-window" style="display:none; position:fixed; bottom:105px; right:20px; width:340px; height:500px; background:white; border-radius:24px; box-shadow:0 15px 50px rgba(0,0,0,0.3); z-index:9999999 !important; flex-direction:column; overflow:hidden; border:1px solid #eee;">
+        <div id="sb-window" style="display:none; position:fixed; bottom:105px; right:20px; width:340px; height:500px; background:white; border-radius:24px; box-shadow:0 15px 50px rgba(0,0,0,0.3); z-index:9999999; flex-direction:column; overflow:hidden; border:2px solid #15803d; animation: slideIn 0.3s ease;">
             <div style="background:#15803d; color:white; padding:18px; font-weight:bold; display:flex; justify-content:space-between; align-items:center;">
                 <div style="display:flex; align-items:center; gap:8px;">
                     <img src="logos.png" style="width:25px; height:25px; border-radius:50%; background:white;">
@@ -68,13 +83,13 @@
             </div>
 
             <div id="sb-messages" style="flex:1; padding:15px; overflow-y:auto; background:#f8fafc; display:flex; flex-direction:column; gap:12px;">
-                <div style="background:white; padding:12px; border-radius:15px 15px 15px 4px; align-self:flex-start; font-size:14px; border:1px solid #efefef; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-                    Hello! Main Sproutora AI hoon. Aapka naam kya hai?
+                <div style="background:white; padding:12px; border-radius:15px 15px 15px 4px; align-self:flex-start; font-size:14px; border:1px solid #efefef;">
+                    Namaste! Kaise hain aap? Main aapki kya madad kar sakta hoon? 😊
                 </div>
             </div>
 
             <div style="padding:15px; background:white; border-top:1px solid #f1f5f9; display:flex; gap:8px;">
-                <input type="text" id="sb-input" placeholder="Say Hi or ask price..." style="flex:1; padding:12px; border-radius:12px; border:1px solid #e2e8f0; outline:none; font-size:14px;">
+                <input type="text" id="sb-input" placeholder="Type Hi, Price, Delivery..." style="flex:1; padding:12px; border-radius:12px; border:1px solid #e2e8f0; outline:none; font-size:14px;">
                 <button id="sb-send" style="background:#15803d; color:white; border:none; width:45px; height:45px; border-radius:12px; cursor:pointer; display:flex; align-items:center; justify-content:center;">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
                 </button>
@@ -84,23 +99,9 @@
 
     <script>
     (function() {
-        function getWebsiteData() {
-            return {
-                // Yeh automatically menu se price uthayega
-                price: document.querySelector('.text-5xl')?.innerText || "Rs. 30",
-                address: "Vyapar Vihar, Bilaspur (C.G.)",
-                timing: "8:30 AM"
-            };
-        }
-
-        const icon = document.getElementById('sb-icon');
-        const win = document.getElementById('sb-window');
-        const close = document.getElementById('sb-close');
-        const input = document.getElementById('sb-input');
-        const send = document.getElementById('sb-send');
-        const msgs = document.getElementById('sb-messages');
-
-        icon.onclick = () => { win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none'; };
+        const icon = document.getElementById('sb-icon'), win = document.getElementById('sb-window'), close = document.getElementById('sb-close'), input = document.getElementById('sb-input'), send = document.getElementById('sb-send'), msgs = document.getElementById('sb-messages');
+        
+        icon.onclick = () => { win.style.display = (win.style.display === 'none') ? 'flex' : 'none'; };
         close.onclick = () => { win.style.display = 'none'; };
 
         function handleSend() {
@@ -108,35 +109,42 @@
             const text = val.toLowerCase();
             if(!val) return;
 
-            const site = getWebsiteData();
+            // Site Data
+            const site = { price: "Rs. 30", address: "Vyapar Vihar, Bilaspur (C.G.)", timing: "8:30 AM" };
+
+            // User Bubble
             msgs.innerHTML += `<div style="background:#15803d; color:white; padding:10px 15px; border-radius:15px 15px 4px 15px; align-self:flex-end; font-size:14px; max-width:85%;">${val}</div>`;
             
             let reply = "";
-            const isHindi = /[\u0900-\u097F]/.test(val) || /kaise|kya|hai|naam|paisa|kitna|kaun/.test(text);
+            const isHindi = /[\u0900-\u097F]/.test(val) || /kaise|hai|naam|kya|paisa|kitna|accha|thik/.test(text);
 
+            // --- UPGRADED COMMONSENSE LOGIC ---
             if (text.match(/\b(hi|hello|hey|hii|namaste)\b/)) {
-                reply = isHindi ? "Namaste! Kaise hain aap? Main aapki kya madad kar sakta hoon?" : "Hello! How can I help you today?";
+                reply = isHindi ? "Namaste! Sproutora mein swagat hai. Aaj aap kya khana pasand karenge?" : "Hello! Welcome to Sproutora. What would you like to have today?";
             } 
             else if (text.match(/\b(how are you|kaise ho|kaise hain|hal chal)\b/)) {
-                reply = isHindi ? "Main bilkul badhiya hoon! Aapka din kaisa ja raha hai? 😊" : "I'm doing great! Ready to serve you some health. How about you?";
+                reply = isHindi ? "Main bilkul mast hoon! Shukriya puchne ke liye. Aap kaise hain? 😊" : "I'm doing great, thanks for asking! How are you doing? 😊";
+            }
+            else if (text.match(/\b(good|nice|achha|badhiya|great|perfect|fine|thik)\b/)) {
+                reply = isHindi ? "Sunkar bahut khushi hui! 😊 Kuch aur jaanna chahte hain?" : "That's wonderful to hear! 😊 Anything else I can help with?";
             }
             else if (text.match(/name|naam|kaun|who/)) {
-                reply = isHindi ? "Mera naam Sproutora AI hai! Main aapka healthy companion hoon." : "I am Sproutora AI, your guide to a healthy breakfast!";
+                reply = isHindi ? "Mera naam Sproutora Assistant hai, aapka healthy companion!" : "I am the Sproutora Assistant, your guide to a healthy breakfast!";
             }
             else if (text.match(/price|cost|daam|paisa|kitna/)) {
-                reply = isHindi ? `Hamare healthy bowl ki price abhi ${site.price} hai.` : `Our healthy bowl costs only ${site.price}.`;
+                reply = isHindi ? `Hamare bowl ki price sirf ${site.price} hai.` : `Our healthy bowl costs only ${site.price}.`;
             }
-            else if (text.match(/location|address|kahan|where|bilaspur/)) {
-                reply = isHindi ? `Hum ${site.address} mein deliver karte hain.` : `We deliver in ${site.address}.`;
+            else if (text.match(/location|address|kahan|where/)) {
+                reply = isHindi ? `Hum ${site.address} mein based hain.` : `We are based in ${site.address}.`;
             }
-            else if (text.match(/time|kab|delivery|morning/)) {
-                reply = isHindi ? `Hum roz subah ${site.timing} tak delivery kar dete hain.` : `We deliver every morning by ${site.timing}.`;
+            else if (text.match(/time|kab|delivery/)) {
+                reply = isHindi ? `Hum roz subah ${site.timing} tak delivery karte hain.` : `We deliver every morning by ${site.timing}.`;
             }
-            else if (text.match(/\b(good|badhiya|achha|nice|great)\b/)) {
-                reply = isHindi ? "Sunkar achha laga! 😊" : "That's great to hear! 😊";
+            else if (text.match(/thanks|thank you|shukriya|dhanyawad/)) {
+                reply = isHindi ? "Aapka swagat hai! Healthy rahiye, khush rahiye. 🥗" : "You're most welcome! Stay healthy and fit. 🥗";
             }
             else {
-                reply = isHindi ? "Maaf kijiye, main samajh nahi paaya. Aap Price, Menu ya Delivery ke baare mein pooch sakte hain." : "I'm still learning! You can ask about our Price, Menu, and Delivery timings.";
+                reply = isHindi ? "Main samajh sakta hoon. Aap mujhse Price, Menu ya Delivery ke baare mein kuch bhi puch sakte hain." : "I understand. Feel free to ask about our Price, Menu, or Delivery timings!";
             }
 
             setTimeout(() => {
